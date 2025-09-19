@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="form.css">
+    <script  src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+</head>
+<body>
+    <main>
+        <h1>Candastro do Canditado</h1>
+         <form action="https://formspree.io/f/meolyzoy" method="post">
+        <fieldset>
+            <legend><strong>Informações Pessoais</strong> </legend>
+            <label for="nome">*Nome
+                <input type="text"  required name="nome" id="nome" size="20" value=""  maxlength="80" placeholder="Digite seu nome completo">
+            </label>
+            <div>
+                <br>
+                <label for="Data">*Data de nascimento
+                    <input type="date" name="data" id="data" required name="data" placeholder="Data de nascimento">
+                </label>
+            </div>
+            <div>
+                <br>
+                <label for="Idade">*Idade
+                    <input  class="n" type="number" required name="numero" id="numero">
+                </label>
+            </div>
+            <div>
+                <br>
+                <label for="sexo">*Sexo Biológico
+                <select class="sexo" required name="sexo" id="sexo">
+                    <option selected disabled>Selecione</option>
+                    <option>Masculino</option>
+                    <option>Feminino</option>
+                    <option>Não especificado</option>
+                    <option>Ignorado</option>
+                </option>
+                </select>  
+            </label>
+            </div>
+                <div>
+                    <br>
+                    <label for="cpf">*CPF
+                        <input type="text" placeholder="000.000.000-000" size="10px" name="cpf"  id="cpf">
+                    </label>
+                </div>
+                <div>
+                    <br>
+                    <label for="Estado Cívil">*Estado Cívil
+                    <select class="civil" required name="Estado Civil" id="estado civil"> 
+                    <option selected disabled>Selecione</option>
+                    <option>Solteiro</option>
+                    <option>Casado</option>
+                    <option>Viúvo</option>
+                    <option>Divorciado</option>
+                    </select>
+                    </label>
+                </div>     
+        </fieldset>
+        <fieldset>
+            <legend><strong>Informações de Contato</strong></legend>
+            <div>
+                <br>
+                <label for="Endereço">*Endereço
+                <input class="Endereço" type="text" required name="Endereço" id="Endereço">
+            </label>
+            </div>
+            <div>
+                <br>
+                <label for="numero">*N°
+                    <input class="N" type="number" required name="numero" id="numero">
+                </label>
+            </div>
+            <div>
+                <br>
+                 <label for="complemento">Complemento
+                <input class="complemento" type="text" name="complemento" id="complemento">
+            </label>
+            </div>
+            <div>
+                <br>
+                <label for="bairro">*Bairro
+                    <input class="bairro" type="text"  required name="bairro" id="bairro">
+                </label>
+            </div>
+            <div>
+                <br>
+                <label for="cep">*CEP
+                <input class="cep" type="text" required name="cep" id="cep" size="10" maxlength="9" placeholder="00000-000">
+                </label>
+            </div>
+            <div>
+                <br>
+                <label for="UF">*UF
+                    <select class="uf" required name="UF" id="UF"> <option selected disabled>Selecione</option>
+                        <option>SP</option>
+                        <option>AC</option>
+                        <option>AL</option>
+                        <option>AM</option>
+                        <option>AP</option>
+                        <option>BA</option>
+                        <option>CE</option>
+                        <option>DF</option>
+                        <option>ES</option>
+                        <option>GO</option>
+                        <option>MA</option>
+                        <option>MG</option>
+                        <option>MS</option>
+                        <option>MT</option>
+                        <option>PA</option>
+                        <option>PB</option>
+                        <option>PE</option>
+                        <option>PI</option>
+                        <option>PR</option>
+                        <option>RJ</option>
+                        <option>RN</option>
+                        <option>RO</option>
+                        <option>RR</option>
+                        <option>RS</option>
+                        <option>SC</option>
+                        <option>SR</option>
+                        <option>TO</option>
+                    </select>
+                </label>
+            </div>
+                <div>
+                    <br>
+                    <label for="cel">*Celular
+                        <input class="cel" type="text"  required name="cel" id="cel" placeholder="00-00000-0000" maxlength="13" size="12">
+                    </label>
+                </div>
+                <br>
+                <label for="e-mail">*E-mail
+                <input class="e" type="text" required name="e-mail" id="e-mail" size="30px">
+                </label>
+            </div>
+            <div>
+                <br>
+                <label for="comentário">Comentário
+                    <textarea class="com" name="comentário" id="comentário"  rows="8" style="resize: none;" cols="100"></textarea>
+                </label>
+            </div>
+        </fieldset>
+        <button type="reset"><strong>Limpar</strong></button>
+        <button type="reset"><strong>Enviar</strong></button>
+    </form>
+    <script>
+        $('#cpf').mask('000.000.000-00', {reverse: false});
+        $('#cel').mask('(00) 00000-0000');
+        $('#cep').mask('00000-000');
+    </script>
+    </main>
+</body>
+</html>
